@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Intergalactic Travel, Inc-->
@@ -66,9 +67,23 @@
                     <view key="view" contentMode="scaleToFill" id="IWA-AU-Egu">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PGz-ss-U7q">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oEg-Oo-WIS" firstAttribute="top" secondItem="PGz-ss-U7q" secondAttribute="bottom" id="8bn-Ho-6lH"/>
+                            <constraint firstItem="PGz-ss-U7q" firstAttribute="leading" secondItem="IWA-AU-Egu" secondAttribute="leadingMargin" constant="-20" id="8dF-r4-ZwK"/>
+                            <constraint firstItem="PGz-ss-U7q" firstAttribute="top" secondItem="IWA-AU-Egu" secondAttribute="topMargin" id="Rfi-Ke-ing"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PGz-ss-U7q" secondAttribute="trailing" constant="-20" id="yH2-i1-7Oz"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="starImageView" destination="PGz-ss-U7q" id="7dM-7E-LGi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMv-pP-uEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
